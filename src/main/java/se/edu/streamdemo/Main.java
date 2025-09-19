@@ -61,4 +61,12 @@ public class Main {
         }
     }
 
+    public static void printDeadlinesUsingStreams(ArrayList<Task> tasksData) {
+        System.out.println("Printing deadline using stream ...");
+        tasksData.stream()
+                .filter((Task t) -> t instanceof Deadline) // Lambda Function
+                .forEach(System.out::println);
+
+    }
+
 }
